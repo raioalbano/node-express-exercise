@@ -1,11 +1,8 @@
 import express from 'express';
-
+const routes = require('./server/src/routes/routes');
 const app = express();
 const PORT = 3000;
 
-/*app.get('/', (req, res) =>{
-    res.send(`Node and express are running on port ${PORT}`)
-});*/
-
+app.use('/', routes);
 
 module.exports = app;
